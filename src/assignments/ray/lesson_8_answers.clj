@@ -7,12 +7,8 @@
 (def yahoo "https://au.search.yahoo.com/search?p=")
 (def yippy "https://www.yippy.com/search?query=")
 
-;; Search with core.async
 (defn search [search-engine search-term]
   (slurp (str search-engine search-term)))
-
-(search yahoo "clojure")
-
 
 ;; Search with futures & promises
 (defn fp-search [search-term]
